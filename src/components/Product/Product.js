@@ -22,7 +22,7 @@ const Product = (props) => {
          </div>
       )
    } else {
- 		return <Redirect to="/" />
+ 		return <Redirect to="/grocery-list" />
    }
 }
 
