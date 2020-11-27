@@ -1,0 +1,71 @@
+.ProductCard {
+   display: flex;
+   justify-content: space-between;
+	align-items: center;
+	margin: 0px 0px 20px 0px;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	padding: 10px;
+}
+.ProductCard:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+}
+.name {
+	font-size: 21px;
+	font-weight: 600;
+	background: transparent;
+	border: 0;
+	margin-bottom: 10px;
+}
+.status {
+	position: relative;
+	padding-left: 14px;
+}
+.status span {
+	display: inline;
+	margin: 0px 4px 0px 0px;
+}
+.status span:before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	top: 50%;
+	left: 3px;
+	transform: translateY(-50%);
+	background-color: #38d438;
+	border-radius: 50%;
+	border: 0;
+}
+.status span.ended:before {
+	background-color: red;
+}
+.priority input {
+	margin-left: 5px;
+	border: 1px solid #dbdbdb;
+	padding: 4px 0;
+	width: 26px;
+	border-radius: 4px;
+	text-align: center;
+}
+.actions {
+}
+.btn {
+   background-color: transparent;
+   border: 1px solid #dbdbdb;
+   color: #262626;
+   border-radius: 4px;
+   padding: 5px 9px;
+   font-weight: 600;
+   text-align: center;
+   width: auto;
+	display: inline-block;
+	margin: 0 5px;
+}
+a.btn {
+	text-decoration: none;
+}

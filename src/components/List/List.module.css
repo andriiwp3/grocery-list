@@ -1,0 +1,42 @@
+.List {
+   max-width: 750px;
+   margin: 0 auto;
+   padding: 40px 0;
+}
+.title {
+   text-align: center;
+   font-weight: 700;
+   margin: 0px 0px 30px 0px;
+}
+.List form {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 0px 0px 40px 0px;
+}
+.List form input[type="text"] {
+   flex: 0 0 48%;
+   margin: 0px 0px 10px 0px;
+}
+.List form button {
+   background-color: transparent;
+   border: 1px solid #dbdbdb;
+   color: #262626;
+   border-radius: 4px;
+   padding: 5px 9px;
+   font-weight: 600;
+   text-align: center;
+   width: auto;
+   display: inline-block;
+   margin: 0 5px;
+}
+.checkbox {
+   display: flex;
+   align-items: center;
+}
+.checkbox input {
+   flex: 0 0 48%;
+   margin: 0px 0px 0px 5px;
+}
+.productsList {
+}
