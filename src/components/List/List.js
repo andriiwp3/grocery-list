@@ -42,8 +42,21 @@ const List = (props) => {
             </form>
          </div>
 
+			<div className={classes.sorting}>
+				<div className={classes.status}>
+					<button onClick={() => {props.onChangeStatusSortParam('all')}}>All</button>
+					<button onClick={() => {props.onChangeStatusSortParam(false)}}>We have</button>
+					<button onClick={() => {props.onChangeStatusSortParam(true)}}>Ended</button>
+				</div>
+				<div className={classes.otherParams}>
+					<button onClick={props.onSortByPriority}>By Priority</button>
+					<button onClick={props.onSortByAlphabet}>By Alphabet</button>
+				</div>
+			</div>
+
          <ul className={classes.productsList}>
             {props.productsList.products.map((product, index) => {
+					if(props.productsList.statusSortParam === 'all' || product.ended === props.productsList.statusSortParam) {
                return (
                   <ProductCard
 							single={false}
@@ -58,7 +71,7 @@ const List = (props) => {
                      onChangeStatus={props.onChangeStatus}
                      onChangeName={props.onChangeName}
                   />
-               )
+               )} else { return null}
             })}
          </ul>
       </div>

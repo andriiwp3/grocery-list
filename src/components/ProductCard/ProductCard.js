@@ -1,13 +1,8 @@
-import { useEffect } from "react"
-import { NavLink, Redirect, Route } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import classes from "./ProductCard.module.css"
+import StatusChangeHistory from "./StatusChangeHistory/StatusChangeHistory"
 
 const ProductCard = (props) => {
-   useEffect(() => {
-      return () => {
-        window.history.pathname = '/'
-      }
-   })
    return (
       <div className={classes.ProductCard}>
          <div className={classes.info}>
@@ -72,6 +67,23 @@ const ProductCard = (props) => {
                </NavLink>
             )}
          </div>
+
+         {props.history ? (
+            <div className={classes.history}>
+               {props.history.map((change, index) => {
+                  return (
+                     <StatusChangeHistory
+								key={index}
+                        time={change.time}
+                        oldStatus={change.oldStatus}
+                        newStatus={change.newStatus}
+                     />
+                  )
+               })}
+            </div>
+         ) : (
+            ""
+         )}
       </div>
    )
 }

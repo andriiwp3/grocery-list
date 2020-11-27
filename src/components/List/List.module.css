@@ -11,14 +11,14 @@
 .List form {
    display: flex;
    justify-content: space-between;
-   flex-wrap: wrap;
-   margin: 0px 0px 40px 0px;
+	flex-wrap: wrap;
+	margin: 0px 0px 10px 0px;
 }
 .List form input[type="text"] {
    flex: 0 0 48%;
    margin: 0px 0px 10px 0px;
 }
-.List form button {
+.List button {
    background-color: transparent;
    border: 1px solid #dbdbdb;
    color: #262626;
@@ -28,7 +28,6 @@
    text-align: center;
    width: auto;
    display: inline-block;
-   margin: 0 5px;
 }
 .checkbox {
    display: flex;
@@ -38,5 +37,18 @@
    flex: 0 0 48%;
    margin: 0px 0px 0px 5px;
 }
+.sorting {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 0px 10px 0px;
+}
+.sorting button {
+	margin: 0px 5px 0px 0px;
+}
+.sorting button:last-child {
+	margin: 0px 0px 0px 0px;
+}
+
+
 .productsList {
 }

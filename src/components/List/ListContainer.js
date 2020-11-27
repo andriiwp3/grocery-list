@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { deleteProduct, changePriority, changeStatus, updateNewProductInfo, addProduct, changeName } from "../../redux/reducers/productsReducer"
+import { deleteProduct, changePriority, changeStatus, updateNewProductInfo, addProduct, changeName, changeStatusSortParam, sortByPriority, sortByAlphabet } from "../../redux/reducers/productsReducer"
 import List from "./List"
 
 const mapStateToProps = (state) => {
@@ -26,6 +26,15 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onChangeName: (value, id) => {
 			dispatch(changeName(value, id))
+		},
+		onChangeStatusSortParam: (sortStatus) => {
+			dispatch(changeStatusSortParam(sortStatus))
+		},
+		onSortByPriority: () => {
+			dispatch(sortByPriority())
+		},
+		onSortByAlphabet: () => {
+			dispatch(sortByAlphabet())
 		}
 	}
 }

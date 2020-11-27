@@ -13,38 +13,16 @@ const Product = (props) => {
                name={props.product[0].name}
                ended={props.product[0].ended}
                priority={props.product[0].priority}
+					history={props.product[0].statusChangeHistory}
                onDelete={props.onDelete}
                onChangePriority={props.onChangePriority}
                onChangeStatus={props.onChangeStatus}
-               onChangeName={props.onChangeName}
+					onChangeName={props.onChangeName}
             />
          </div>
       )
    } else {
  		return <Redirect to="/" />
-/*      return (
-         <div
-            style={{
-               height: "100vh",
-               display: "flex",
-               justifyContent: "center",
-               alignItems: "center",
-               fontSize: "21px",
-            }}
-         >
-            <span
-               style={{
-                  fontWeight: 700,
-                  marginRight: "20px",
-                  fontSize: "48px",
-                  color: "red",
-               }}
-            >
-               404
-            </span>{" "}
-            Not found
-			</div>  
-      ) */
    }
 }
 
