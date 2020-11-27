@@ -6,10 +6,10 @@ import ProductContainer from "./components/Product/ProductContainer"
 function App() {
    return (
       <Switch>
-         <Route exact path="/grocery-list">
+         <Route exact path="/>
             <ListContainer />
          </Route>
-         <Route path="/grocery-list/:id">
+         <Route path="/:id">
             <ProductContainer />
          </Route>
       </Switch>
