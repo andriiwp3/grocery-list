@@ -12,24 +12,10 @@ const initialState = {
    statusSortParam: "all",
    newProductInfo: {
       value: "",
-      priority: 5,
+      priority: '',
       ended: false,
    },
    products: [
-      {
-         id: 232132,
-         name: "egg",
-         ended: false,
-         priority: 3,
-         statusChangeHistory: [],
-      },
-      {
-         id: 23034,
-         name: "apple",
-         ended: true,
-         priority: 5,
-         statusChangeHistory: [],
-      },
    ],
 }
 
@@ -46,7 +32,7 @@ const productsReducer = (state = initialState, action) => {
                ...state,
                newProductInfo: {
                   value: "",
-                  priority: 5,
+                  priority: '',
                   ended: false,
                },
                products: [
